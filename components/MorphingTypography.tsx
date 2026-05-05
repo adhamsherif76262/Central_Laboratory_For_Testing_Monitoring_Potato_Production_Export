@@ -87,6 +87,7 @@ export default function MorphingTypography() {
     <button
       onClick={handleToggle}
       disabled={isSwitching}
+      // disabled={true}
       className="relative w-20 h-20 mx-auto rounded-2xl bg-linear-to-br from-zinc-950 to-zinc-600
                  border-2 border-zinc-700 hover:border-emerald-500 transition-colors
                  flex items-center justify-center overflow-hidden hover:cursor-pointer"
