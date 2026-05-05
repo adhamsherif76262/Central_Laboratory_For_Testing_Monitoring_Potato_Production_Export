@@ -4,7 +4,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const PUBLIC_FILE = /\.(.*)$/;
 const SUPPORTED_LOCALES = ['en', 'ar'];
-const DEFAULT_LOCALE = 'en';
+// const SUPPORTED_LOCALES = ['ar'];
+const DEFAULT_LOCALE = 'ar';
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -21,7 +22,8 @@ export function proxy(request: NextRequest) {
 
   // Detect language
   const langHeader = request.headers.get('accept-language');
-  const preferredLang = langHeader?.split(',')?.[0]?.split('-')[0] || DEFAULT_LOCALE;
+//   const preferredLang = langHeader?.split(',')?.[0]?.split('-')[0] || DEFAULT_LOCALE;
+  const preferredLang = "ar";
 
   const locale = SUPPORTED_LOCALES.includes(preferredLang) ? preferredLang : DEFAULT_LOCALE;
 
