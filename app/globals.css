@@ -11,7 +11,11 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+@theme {
+  --breakpoint-xs: 500px;
+  --breakpoint-xxs: 400px;
+  --breakpoint-xxxs: 300px;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +23,133 @@
   }
 }
 
+
+/* Root Growth Navbar Animations */
+@keyframes marquee-scroll-seamless {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes root-grow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes breadcrumb-expand {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    max-height: 100vh;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes breadcrumb-collapse {
+  0% {
+    opacity: 1;
+    max-height: 100vh;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Root Growth Navbar Animation Classes */
+.animate-marquee-scroll-seamless {
+  animation: marquee-scroll-seamless 30s linear infinite;
+}
+
+.animate-root-grow {
+  animation: root-grow 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-breadcrumb-expand {
+  animation: breadcrumb-expand 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform-origin: top;
+}
+
+.animate-breadcrumb-collapse {
+  animation: breadcrumb-collapse 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+  transform-origin: top;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Container that clips the light beam */
+.logo-shimmer-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 9999px; /* Matches rounded-full */
+  isolation: isolate;    /* Ensures z-index works correctly */
+}
+
+/* The actual light beam */
+.logo-shimmer-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Ensures it is on top of the image */
+  
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  
+  transform: skewX(-25deg);
+  animation: shine-propagation 3s linear infinite;
+}
+
+@keyframes shine-propagation {
+  0% {
+    left: -150%;
+  }
+  40% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  /* background: var(--background);
+  color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
 }
