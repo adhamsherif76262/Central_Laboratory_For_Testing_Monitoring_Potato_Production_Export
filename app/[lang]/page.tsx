@@ -248,7 +248,7 @@ export default function Home() {
       <div className="mt-10 xxxs:min-w-[100%] mb-10">
         <ParagraphStickyImage
         rtl={lang === 'ar'}
-        imageSrc={"/images/Dr.Naglaa-Enhanced-cropped.jpg"}
+        imageSrc={"/Images/Dr.Naglaa-Enhanced-cropped.jpg"}
         paragraphs={t.P2}
          title={t.P2_Title}
         // paragraphs={t.P5}
