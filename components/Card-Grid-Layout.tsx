@@ -82,7 +82,7 @@ const colorClasses = {
                 <div className="rounded-full bg-background flex items-center justify-center">
                   {/* {item.icon} */}
                   
-                    <Image src="https://raw.githubusercontent.com/adhamsherif76262/Central_Laboratory_For_Testing_Monitoring_Potato_Production_Export/refs/heads/main/public/Images/Gear_GIF.gif" alt="Icon 1" width={70} height={70}  
+                    <Image src="/Images/Gear_GIF.gif" alt="Icon 1" width={70} height={70}  
                       unoptimized={true} // 👈 Forces Next.js to treat it like a regular img tag
                      className="rounded-full" />
                     <Image src="/Images/Statistics (1).png" alt="Icon 1" width={70} height={70}  className="rounded-full" />
