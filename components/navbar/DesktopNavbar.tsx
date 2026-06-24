@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import MorphingTypography from '../MorphingTypography'
 import { useParams } from 'next/navigation';
@@ -52,9 +52,9 @@ const navLabels = {
   const logoText = "CLTMPE"
 
   return (
-    <nav dir={lang === "ar" ? "rtl" : "ltr"}  className="relative bg-gradient-to-r from-amber-950 via-slate-900 to-green-950 border-b-2 border-green-600/30 overflow-hidden p-0">
+    <nav dir={lang === "ar" ? "rtl" : "ltr"}  className="relative bg-linear-to-r from-amber-950 via-slate-900 to-green-950 border-b-2 border-green-600/30 overflow-hidden p-0">
       {/* Marquee effect background - SVG scrolls seamlessly with duplicated content */}
-      {/* <svg className={`absolute inset-0 w-full h-full opacity-90 animate-marquee-scroll-seamless ${(isOpen || isClosing) ? "hidden" : "block"}`} viewBox="0 0 3000 150" preserveAspectRatio="none">
+      <svg className={`absolute inset-0 w-full h-full opacity-90 animate-marquee-scroll-seamless not-sm:hidden ${(isOpen || isClosing) ? "hidden" : "block"}`} viewBox="0 0 3000 150" preserveAspectRatio="none">
         <defs>
           <linearGradient id="rootGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="rgba(34, 197, 94, 0.5)" />
@@ -72,6 +72,8 @@ const navLabels = {
           <path d="M 1400,10 Q 1450,36 1500,62 T 1600,130" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
           <path d="M 1600,14 Q 1650,34 1700,58 T 1800,120" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
           <path d="M 1800,8 Q 1850,37 1900,67 T 2000,140" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
+        </g>
+\        <g>
           <path d="M 2000,10 Q 2050,30 2100,50 T 2200,120" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
           <path d="M 2200,5 Q 2250,35 2300,60 T 2400,130" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
           <path d="M 2400,15 Q 2450,30 2500,55 T 2600,110" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
@@ -83,9 +85,7 @@ const navLabels = {
           <path d="M 3600,14 Q 3650,34 3700,58 T 3800,120" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
           <path d="M 3800,8 Q 3850,37 3900,67 T 4000,140" stroke="url(#rootGradient)" strokeWidth="3" fill="none" />
         </g>
-\        <g>
-        </g>
-      </svg> */}
+      </svg>
 
       <div className="relative max-w-8xl mx-auto px-4 sm:px-8 md:px-2 lg:px-4 py-2 z-10" dir={lang === "ar" ? "rtl" : "ltr"}>
         <div className={`flex items-center justify-between`}>
@@ -112,15 +112,15 @@ const navLabels = {
           <div className={`hidden md:flex items-center lg:gap-8 ${isRTL ? 'text-2xl' : 'text-xl'}`}>
             {navLinks.map((link, idx) => (
               <div key={idx} className="relative group cursor-pointer" onMouseEnter={() => setHoveredLink(idx)} onMouseLeave={() => setHoveredLink(null)}>
-                <Link href={link.href}  className="text-slate-200 hover:text-green-300 transition-colors duration-300 relative p-4 font-black cursor-pointer">
+                <Link href={link.href}  className="text-white transition-colors duration-300 relative p-4 font-black cursor-pointer">
                     {navLabels[lang === "ar" ? "ar" : "en"][link.key]}  
                     {/* {navLabels["ar"][link.key]}   */}
                     {/* {navLabels[""][link.key]}   */}
                     {/* Root growth animation on hover - matching large navbar */}
                   {hoveredLink === idx && (
                     <>
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-green-400 via-green-300 to-green-400 animate-root-grow"></div>
-                      <div className="absolute inset-0 rounded-lg bg-green-400/10 group-hover:bg-green-400/20 transition-colors"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-yellow-200 via-yellow-100 to-yellow-200 animate-root-grow"></div>
+                      <div className="absolute inset-0 rounded-lg bg-yellow-300/10 group-hover:bg-yellow-300/20 transition-colors"></div>
                     </>
                   )}
                 </Link>
@@ -155,15 +155,15 @@ const navLabels = {
                 <button
                 // href={link.href}
                   key={idx}
-                  className={`block text-2xl font-black  w-full px-4 py-3 text-slate-200 hover:text-green-300 hover:bg-green-600/10 rounded-lg transition-all duration-300 relative group overflow-hidden cursor-pointer ${
-                    hoveredLink === idx ? 'bg-green-600/10' : ''
+                  className={`block text-2xl font-black  w-full px-4 py-3 text-slate-200 hover:text-yellow-300 hover:bg-yellow-600/10 rounded-lg transition-all duration-300 relative group overflow-hidden cursor-pointer ${
+                    hoveredLink === idx ? 'bg-yellow-600/10' : ''
                   }`}
                   onMouseEnter={() => setHoveredLink(idx)}
                   onMouseLeave={() => setHoveredLink(null)}
                 >
-                <Link href={link.href}>
+                <Link onClick={() => handleClose()} href={link.href}>
                   {/* Root growth animation for mobile - same as desktop */}
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-green-400 via-green-300 to-green-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-yellow-200 via-yellow-100 to-yellow-200 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
                   <span className="relative">
                     {navLabels[lang === "ar" ? "ar" : "en"][link.key]}  
                     {/* {link} */}

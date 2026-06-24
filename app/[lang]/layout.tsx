@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 import DesktopNavbar from "../../components/navbar/DesktopNavbar";
+import { Amiri } from 'next/font/google';
+import { clsx } from "clsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const amiri = Amiri({
+  subsets: ['arabic'],
+  variable: '--font-arabic',
+  weight: ['400', '700'], // You can customize weights as needed
 });
 
 export const metadata: Metadata = {
@@ -31,11 +40,20 @@ export default async function RootLayout({
   return (
     <html
       lang={lang} dir={dir}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={clsx(
+        "h-full antialiased",
+      )}
     >
-      <body className="min-h-full flex flex-col">
+      {/* <body className={`min-h-full flex flex-col font-arabic`}> */}
+      <body className={clsx(
+        amiri.variable,
+        lang === 'ar' ? 'font-arabic' : 'font-sans',  // 👈 Conditional font class
+        "min-h-full flex flex-col"
+      )}>
         <DesktopNavbar />
         {children}
+
+        {/* <script src="../../node_modules/preline/dist/preline.js"></script> */}
       </body>
     </html>
   );
