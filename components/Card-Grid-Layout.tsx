@@ -85,7 +85,7 @@ const colorClasses = {
                     <Image src="/Images/Gear_GIF.gif" alt="Icon 1" width={70} height={70}  
                       unoptimized={true} // 👈 Forces Next.js to treat it like a regular img tag
                      className="rounded-full" />
-                    <Image src="/Images/Statistics (1).png" alt="Icon 1" width={70} height={70}  className="rounded-full" />
+                    {/* <Image src="/Images/Statistics (1).png" alt="Icon 1" width={70} height={70}  className="rounded-full" /> */}
                 </div>
               )}
               {item.stats && (
