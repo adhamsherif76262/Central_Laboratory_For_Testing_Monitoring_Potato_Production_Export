@@ -189,7 +189,7 @@ export default function Home() {
             <AccentHighlightList
               items={t.Services}
               // items={labTasks}
-              title={"asdddddddddddddddddd"}
+              title={""}
               direction={isRTL ? 'rtl' : 'ltr'}
               variant="underline"
               // variant="gradient-accent"
