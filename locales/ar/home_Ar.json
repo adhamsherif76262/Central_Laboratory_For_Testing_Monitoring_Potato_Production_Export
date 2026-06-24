@@ -282,7 +282,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (2).png"
+        "image": "/Images/Statistics (2).png"
       },
       {
         "id": "2",
@@ -290,7 +290,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (3).png"
+        "image": "/Images/Statistics (3).png"
       },
       {
         "id": "3",
@@ -298,7 +298,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (4).png"
+        "image": "/Images/Statistics (4).png"
       },
       {
         "id": "4",
@@ -306,7 +306,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (5).png"
+        "image": "/Images/Statistics (5).png"
       },
       { 
         "id": "5",
@@ -314,7 +314,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (6).png"
+        "image": "/Images/Statistics (6).png"
       },
       {
         "id": "6",
@@ -322,7 +322,7 @@
         "description": "",
         "gradient": "",
         "icon": "",
-        "image": "/images/Statistics (7).png"
+        "image": "/Images/Statistics (7).png"
       }
     ],
     "Services_Title":"خدمات المعمل المركزي لفحص ومراقبة انتاج وتصدير البطاطس",
