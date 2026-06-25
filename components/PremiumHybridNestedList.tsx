@@ -297,11 +297,11 @@ export function PremiumHybridNestedList({ items, isRTL = false }: PremiumHybridN
                 {/* Content */}
                 <div className={`p-5 md:p-6 flex items-center justify-between gap-4 ${isRTL ? 'sm:flex-row-reverse xxxs:flex-col-reverse' : ''}`}>
                   <div className={`flex-1 text-left ${isRTL ? 'text-right' : ''}`}>
-                    <p className={`font-black text-2xl leading-relaxed ${styles.text} transition-all duration-600 ${isHovered ? 'text-2xl' : ''}`}>
+                    <p className={`font-black xxs:text-2xl xxxs:text-xl leading-relaxed ${styles.text} transition-all duration-600 ${isHovered ? 'xxs:text-2xl xxxs:text-xl' : ''}`}>
                       {isRTL && item.labelAr ? item.labelAr : item.label}
                     </p>
                     {hasChildren && (
-                      <p className={`text-xs md:text-sm font-medium transition-all duration-300`}
+                      <p className={`text-xl font-black  md:text-sm font-medium transition-all duration-300`}
                         style={{ color: getStylesByLevel(level).text }}
                       >
                         {item.children?.length}
@@ -341,7 +341,7 @@ export function PremiumHybridNestedList({ items, isRTL = false }: PremiumHybridN
                 <div
                   className={`space-y-4s rounded-2xl p-5 md:p-6 border-2 overflow-hidden absolute inset-x-0
                     ${styles.border} ${getStylesByLevel(level + 1).bg}
-                    ${isRTL ? 'mr-5 md:mr-8' : 'ml-5 md:ml-8'}
+                    ${isRTL ? 'xxxs:mr-0 xs:mr-5 md:mr-8' : 'xxxs:ml-0 xs:ml-5 md:ml-8'}
                   `}
                   style={{
                     maxHeight: isExpanded ? '10000px' : '0px',
