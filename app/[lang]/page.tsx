@@ -687,7 +687,7 @@ export default function Home() {
 // ];
 
   return (
-    <main className="max-ws-8xl mx-10 my-0 p-0 ">
+    <main className=" xxxs:mx-2 xxs:mx-5 sm:mx-10 my-0 p-0 ">
 
       <Heading>
         {/* {"المعمل المركزي لفحص ومراقبة انتاج وتصدير البطاطس"} */}
