@@ -54,7 +54,7 @@ const navLabels = {
   return (
     <nav dir={lang === "ar" ? "rtl" : "ltr"}  className="relative bg-linear-to-r from-amber-950 via-slate-900 to-green-950 border-b-2 border-green-600/30 overflow-hidden p-0">
       {/* Marquee effect background - SVG scrolls seamlessly with duplicated content */}
-      <svg className={`absolute inset-0 w-full h-full opacity-90 animate-marquee-scroll-seamless not-sm:hidden ${(isOpen || isClosing) ? "hidden" : "block"}`} viewBox="0 0 3000 150" preserveAspectRatio="none">
+      <svg className={`absolute inset-0 z-0 w-full h-full opacity-90 animate-marquee-scroll-seamless not-sm:hidden ${(isOpen || isClosing) ? "hidden" : "block"}`} viewBox="0 0 3000 150" preserveAspectRatio="none">
         <defs>
           <linearGradient id="rootGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="rgba(34, 197, 94, 0.5)" />

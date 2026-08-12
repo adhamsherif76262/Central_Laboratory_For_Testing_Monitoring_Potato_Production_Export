@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DesktopNavbar from "../../components/navbar/DesktopNavbar";
+import Footer from "../../components/footer/footer";
 import { Amiri } from 'next/font/google';
 import { clsx } from "clsx";
 
@@ -52,7 +53,7 @@ export default async function RootLayout({
       )}>
         <DesktopNavbar />
         {children}
-
+        <Footer rtl={dir === 'rtl' ? true : false}/>
         {/* <script src="../../node_modules/preline/dist/preline.js"></script> */}
       </body>
     </html>
