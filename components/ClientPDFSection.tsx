@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { ArrowDownTrayIcon, EyeIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import FuturisticHeading from './FuturisticHeading';
+import Heading from './Heading';
 import type { PdfMeta } from '@/lib/pdf-meta';
 import { usePathname } from 'next/navigation';
 
@@ -78,6 +78,7 @@ function PDFCard({ fileUrl, lang, onPreview, animation, preMeta }: PDFCardProps)
       applyPreMeta(preMeta);
     } else {
       const filename = decodeURIComponent(fileUrl.split('/').pop() || 'document.pdf');
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMeta({
         title: filename,
         size: lang === 'ar' ? 'غير معروف' : 'Unknown',
@@ -213,7 +214,7 @@ export default function ClientPDFSection({
   return (
     <>
       <section className="p-0 flex flex-col items-center">
-        <FuturisticHeading rtl={isArabic}>{title}</FuturisticHeading>
+        <Heading rtl={isArabic}>{title}</Heading>
         <div className="flex flex-wrap justify-center gap-6 mt-6">
           <PDFCard
             fileUrl={pdf}
