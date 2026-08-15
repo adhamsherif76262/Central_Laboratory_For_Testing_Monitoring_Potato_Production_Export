@@ -274,57 +274,6 @@
                 "icon": "s"
             }
     ],
-    "Statistics_Title": "الاحصائيات الخاصة بالأنشطة المختلفة للمعمل لخمسه مواسم متتاليه حتى موسم 2024-2025",
-    "Statistics":[
-      {
-        "id": "1",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (2).png"
-      },
-      {
-        "id": "2",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (3).png"
-      },
-      {
-        "id": "3",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (4).png"
-      },
-      {
-        "id": "4",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (5).png"
-      },
-      { 
-        "id": "5",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (6).png"
-      },
-      {
-        "id": "6",
-        "title": "",
-        "description": "",
-        "gradient": "",
-        "icon": "",
-        "image": "/Images/Statistics (7).png"
-      }
-    ],
     "Services_Title":"خدمات المعمل المركزي لفحص ومراقبة انتاج وتصدير البطاطس",
     "Services":[
         {

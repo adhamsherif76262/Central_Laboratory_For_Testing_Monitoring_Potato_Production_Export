@@ -1,0 +1,83 @@
+{
+    
+    "Statistics_Title": "الاحصائيات الخاصة بالأنشطة المختلفة للمعمل لخمسه مواسم متتاليه حتى موسم 2024-2025",
+    "Statistics":[
+      {
+        "id": "1",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (2).png"
+      },
+      {
+        "id": "2",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (3).png"
+      },
+      {
+        "id": "3",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (4).png"
+      },
+      {
+        "id": "4",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (5).png"
+      },
+      { 
+        "id": "5",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (6).png"
+      },
+      {
+        "id": "6",
+        "title": "",
+        "description": "",
+        "gradient": "",
+        "icon": "",
+        "image": "/Images/Statistics (7).png"
+      }
+    ],
+    "ISO":[
+        {
+            "id": "1",
+            "title": "",
+            "description": "",
+            "gradient": "",
+            "icon": "",
+            "image": "/ISO/Iso (1).jpeg"
+        },
+        {
+            "id": "2",
+            "title": "",
+            "description": "",
+            "gradient": "",
+            "icon": "",
+            "image": "/ISO/Iso (2).jpeg"
+        }
+    ],
+    "Video_Gallery_Array" : [
+        {
+            "id": "1",
+            "title": "",
+            "titleAr": "",
+            "embedUrl": ""
+        }
+
+    ],
+    "Video_Gallery_Main_Title" : "",
+    "Video_Gallery_Sub_Title" : ""
+}

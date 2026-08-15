@@ -142,7 +142,8 @@ export function GradientCarousel({ items , sectionTitle = "" }: GradientCarousel
 
   return (
     <div className="w-full bg-[#FAFsAF0] mb-10 rounded-3xl flex flex-col items-center justify-center">
-      <div className="sm:max-w-[550px] md:max-w-[600px] xlg:max-w-3xl lg:max-w-4xl xl:max-w-6xl w-full">
+      {/* <div className="sm:max-w-[550px] md:max-w-[600px] xlg:max-w-3xl lg:max-w-4xl xl:max-w-6xl w-full"> */}
+      <div className="w-auto">
         {/* Header */}
         {
             sectionTitle && (
@@ -173,6 +174,7 @@ export function GradientCarousel({ items , sectionTitle = "" }: GradientCarousel
             <div className="w-full max-w-msd">
               <div
                 className={`sm:min-h-[300px] md:min-h-[350px] xlg:min-h-[450px] lg:min-h-[500px] xl:min-h-[650px] rounded-3xl bg-cover bg-center shadow-2xl p-2  flex flex-col justify-between text-white ${getAnimationClass()}`}
+                // className={`min-h-max rounded-3xl bg-cover bg-center shadow-2xl p-2  flex flex-col justify-between text-white ${getAnimationClass()}`}
                 style={{
                 //   backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('${visible[1].image}')`,
                   backgroundImage: `url('${visible[1].image}')`,

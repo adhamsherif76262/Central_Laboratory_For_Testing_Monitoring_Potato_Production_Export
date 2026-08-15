@@ -2,15 +2,18 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
+import { ImageCarousel } from './ShadCN-Carousel';
 
 interface ParagraphStickyImageProps {
   rtl?: boolean; // if true → rtl, else → ltr
+  type?: boolean; // if true → rtl, else → ltr
   imageSrc: string;
   title: string;
   paragraphs: string[];
+  Images?: string[];
 }
 
-const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false, imageSrc, title , paragraphs}) => {
+const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false, imageSrc, title , paragraphs , type =true , Images}) => {
   return (
     <section dir={rtl ? 'rtl' : 'ltr'} className="p-6 bg-[#FAFAF0] rounded-3xl shadow-2xl border border-cyan-700/40 xl:min-width-sm mx-auto">
       <h2 className={clsx(
@@ -20,19 +23,25 @@ const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false
 
       <div className="flex flex-col md:flex-row shadow-2xl items-center md:items-start">
         {/* Responsive Sticky/Top Image */}
-        <div className="w-full md:w-auto md:sticky md:top-4 md:self-start p-0 ">
-          <Image
-            src={imageSrc}
-            alt="Illustration"
-            width={500}
-            height={500}
-            className="xxxs:w-96 xl:w-[800px] lg:w-[700px] md:w-[500px] mx-auto rounded border max-h-[550px]"
-          />
+        <div className="w-full max-w-xl md:w-auto md:sticky md:top-4 md:self-start p-0 ">
+          {
+            type ? 
+              <Image
+                src={imageSrc}
+                alt="Illustration"
+                width={500}
+                height={500}
+                className="xxxs:w-96 xl:w-[800px] lg:w-[700px] md:w-[500px] mx-auto rounded border max-h-[550px]"
+              /> 
+            : 
+            <ImageCarousel srcs={Images || []}></ImageCarousel>
+          }
+
         </div>
 
         {/* Scrollable Paragraph */}
         <div className={clsx(
-            "overflow-y-auto max-h-[550px] p-4 text-justify leading-relaxed w-full bg-gray-50 font-black",
+            "overflow-y-auto max-h-[650px] max-w-[950px] p-4 text-justify leading-relaxed w-full bg-gray-50 font-black",
             rtl ? 'xxs:text-2xl xxxs:text-xl' : 'md:text-xl lg:text-2xl xs:text-xl xxxs:text-md'
         )}>
          {paragraphs.map((p,i)=>

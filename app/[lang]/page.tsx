@@ -3,22 +3,25 @@ import Heading from "../../components/Heading";
 import ParagraphSection from "../../components/ParagraphSection";
 import ParagraphStickyImage from "../../components/ParagraphStickyImage";
 import Image from "next/image";
+import clsx from "clsx";
 import enHome from '../../locales/en/home_En.json';
 import arHome from '../../locales/ar/home_Ar.json';
 import { useParams, useRouter } from "next/navigation";
 import { CardGridList } from "../../components/Card-Grid-Layout";
 import { ModernIconList } from "../../components/ModernIconList";
 import { CardUnorderedList } from "../../components/CardUnorderedList";
-import { Droplets, Leaf, Shield, Zap, Microscope } from "lucide-react";
+// import { Droplets, Leaf, Shield, Zap, Microscope } from "lucide-react";
 // import PrelineCarousel from "@/components/PrelineCarousel";
-import { GradientCarousel } from "../../components/GradientCarousel";
+// import { GradientCarousel } from "../../components/GradientCarousel";
 import { AccentHighlightList } from "../../components/AccentHighlightList";
-import { PremiumHybridNestedList } from "@/components/PremiumHybridNestedList";
+// import { PremiumHybridNestedList } from "@/components/PremiumHybridNestedList";
+// import CinematicVideoGallery from "@/components/CinematicVideoGallery";
+import { ImageCarousel } from "@/components/ShadCN-Carousel";
 export default function Home() {
   const {lang} = useParams();
   const t = arHome;
   const isRTL = lang === 'ar';
-  const router = useRouter();
+  // const router = useRouter();
   // const t = lang === 'ar' ? arHome : enHome;
 // const cardItems = [
 // {
@@ -694,7 +697,7 @@ export default function Home() {
         {t.Title}
       </Heading>
       {/* <PremiumHybridNestedList items={sampleData} isRTL={isRTL}></PremiumHybridNestedList> */}
-        
+
         {/* <PrelineCarousel></PrelineCarousel> */}
         
       <ParagraphSection 
@@ -721,6 +724,63 @@ export default function Home() {
          />
       </div>
 
+      <div className="mt-10 xxxs:min-w-[100%] mb-10">
+        <ParagraphStickyImage
+        rtl={lang === 'ar'}
+        imageSrc={""}
+        paragraphs={t.P2}
+        title={t.P2_Title}
+        type={false}
+        Images={["/Images/ISO/Iso (2).jpeg", "/Images/ISO/Iso (1).jpeg"]}
+        // paragraphs={t.P5}
+        //  title={t.P5_Title}
+        //  rtl={isRTL}
+         />
+      </div>
+
+      <div className="mt-10 xxxs:min-w-[100%] mb-10">
+        <section
+            dir={isRTL ? 'rtl' : 'ltr'}
+            className="w-full mt-12 px-4 py-4 sm:px-6 lg:px-12 bg-[#FAFAF0] rounded-3xl shadow-2xl border border-cyan-700/40 xl:min-width mx-auto"
+          >
+            <h2 className={clsx(
+              "font-black mb-6 tracking-wider text-center bg_Gray",
+              isRTL ? "xxxs:text-2xl xs:text-3xl" : "xxxs:text-xl xxs:text-2xl"
+            )}>
+            {isRTL ? "معاير الجودة والكفاءة المعملية Iso 17025:2017" : "Quality and laboratory efficiency standards ISO 17025:2017"}   
+           </h2>
+          
+            <div className={clsx(
+              "space-y-6 text-gray-300 text-sm text-center",
+              isRTL ? "xxxs:text-xl xs:text-2xl font-black" : "xxxs:text-lg xxs:text-xl lg:text-2xl"
+            )}>
+                <p className={clsx(
+                  "hover:text-blue-950 transition-colors duration-200 font-black text-black",
+                  isRTL ? "leading-relaxed" : "leading-relaxed"
+                )}>
+                  حصل المعمل المركزي لفحص ومراقبه انتاج وتصدير البطاطس علي الاعتماد الدولي   ISO 17025:2017 منذ أبريل  2020 والخاص بكفاءه اختبار المعامل ، وهو يمثل خطوة مهمة نحو تعزيز ثقة عملائنا ، ويؤكد حرصنا على تقديم نتائج دقيقة ومعتمدة تلبي احتياجاتهم وتدعم قراراتهم بجانب تعزيز الثقه للجهات الرقابية المحلية والدولية في كفاءه الاختبارات ومصداقية النتائج. 
+                </p>
+                <ul>
+                  <h2 className={clsx(
+                    "font-black mb-6 tracking-wider text-center bg_Gray",
+                    isRTL ? "xxxs:text-2xl xs:text-3xl" : "xxxs:text-xl xxs:text-2xl"
+                  )}>
+                    خطواتنا للتعزيز المستمر للاعتماد:
+                  </h2>
+                  <li className="font-black text-black">•	تزويد المعمل باستمرار بأحدث الأجهزة والتقنيات المتطورة لضمان دقة الفحوصات.</li>
+                  <li className="font-black text-black">•	تدريب العاملين بشكل مستمر على استخدام هذه الأجهزة وفق أحدث الممارسات العالمية.</li>
+                  <li className="font-black text-black">•	تطبيق احدث بروتوكولات الفحص المعتمدة دوليًا لضمان موثوقية النتائج وتوافقها مع المعايير العالمية.</li>
+                </ul>
+                <p className={clsx(
+                  "hover:text-blue-950 transition-colors duration-200 font-black text-black",
+                  isRTL ? "leading-relaxed" : "leading-relaxed"
+                )}>
+                  نحن ملتزمون بالاستمرار في تطوير أنظمتنا وضمان التوافق مع أحدث المعايير العالمية، بما يضمن استدامة الجودة والشفافية في كل ما نقدمه.
+                </p>
+            </div>
+          </section>
+      </div>
+        <ImageCarousel srcs={["/Images/ISO/Iso (2).jpeg", "/Images/ISO/Iso (1).jpeg"]}></ImageCarousel>
 
       <div className="border border-border/40 backdrop-blur-sm rounded-3xl shadow-2xl border-cyan-700/40 mb-12">
               <ModernIconList

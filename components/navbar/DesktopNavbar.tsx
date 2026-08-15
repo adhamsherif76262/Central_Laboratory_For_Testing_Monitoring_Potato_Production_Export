@@ -45,7 +45,7 @@ const navLabels = {
     { href: `/${lang}`, key: 'home' },
     { href: `/${lang}/services`, key: 'services' },
     { href: `/${lang}/about_Us`, key: 'about_Us' },
-    { href: `/${lang}/contact_Us`, key: 'contact_Us' },
+    // { href: `/${lang}/contact_Us`, key: 'contact_Us' },
   ];
 
 //   const logoText = lang === "en" ? 'Brown Rot' : 'اللفحة البنية'
