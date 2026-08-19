@@ -112,6 +112,54 @@
   --color-destructive-foreground: #ffffff;
 }
 
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-bounceIn {
+  animation: bounceIn 2s ease-out forwards;
+}
+
+/* Option 4: Rotate-in with Blur */
+@keyframes rotateInBlur {
+  0% {
+    transform: rotate(-180deg) scale(0.5);
+    filter: blur(10px);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(180deg) scale(1.25);
+    filter: blur(5px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.rotate-in-blur {
+  animation: rotateInBlur 1.5s ease-out both;
+}
+.Grid_Ar{
+  grid-template-columns: 1fr 2fr 1.2fr;
+}
+.Grid_En{
+  grid-template-columns: 1.1fr 2fr 1.05fr;
+}
 /* Root Growth Navbar Animations */
 @keyframes marquee-scroll-seamless {
   0% {

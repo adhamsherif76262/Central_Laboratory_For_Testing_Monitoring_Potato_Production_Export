@@ -91,7 +91,7 @@ function PDFCard({ fileUrl, lang, onPreview, animation, preMeta }: PDFCardProps)
     <div
       ref={cardRef}
       className={clsx(
-        "overflow-x-hidden cursor-pointer bg_Beige_reversed dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-lg transition-shadow xxxs:w-[290px] xxs:w-[360px]",
+        "overflow-x-hidden cursor-pointer bg_Beige_reversed bg-[#FAFAF0]s bg-gray-100 dark:bg-gray-800 rounded-3xl shadsow-2xl overflow-hidden hover:shadow-lg transition-shadow xxxs:w-[320px] xxs:w-[360px]",
         visible ? animation : "opacity-0 translate-x-10"
       )}
     >
@@ -134,7 +134,7 @@ function PDFCard({ fileUrl, lang, onPreview, animation, preMeta }: PDFCardProps)
       </div>
 
       {/* Info */}
-      <div className="p-4 space-y-2">
+      <div className="p-4 space-y-2 text-center">
         <h3 className="text-lg font-extrabold line-clamp-2">{meta.title}</h3>
         <div
           className={clsx(
