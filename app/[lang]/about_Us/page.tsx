@@ -43,7 +43,7 @@ const mastersMeta = getPdfMetaSync("/PDFs/Masters_and_Doctoral_Theses.pdf");
         </Heading>
         <ImageGallery language={isRTL ? "ar" : "en"}/>
         
-              <div className="space-y-10 py-6 xxxs:overflow-hidden xxs:overflow-visible">
+              <div className="space-y-10 py-6 xxxs:overflow-hiddesn xxs:overflow-visible">
                 <PDFWrapper 
                   // title={isArabic ? 'ملف الأبحاث' : 'Researches File'}
                   title={'ملف الأبحاث'}
@@ -62,7 +62,7 @@ const mastersMeta = getPdfMetaSync("/PDFs/Masters_and_Doctoral_Theses.pdf");
         /> */}
       </div>
 
-      <div className="space-y-10 py-6 xxxs:overflow-hidden xxs:overflow-visible">
+      <div className="space-y-10 py-6 xxxs:overflow-hiddesn xxs:overflow-visible">
         <PDFWrapper 
           title={"ملف رسائل الماجستير و الدكتوراه"}
           pdf={"/PDFs/Masters_and_Doctoral_Theses.pdf"}
