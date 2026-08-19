@@ -21,9 +21,9 @@ const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false
         rtl ? 'xs:text-3xl xxxs:text-2xl' : 'sm:text-3xl xs:text-2xl xxxs:text-xl'
       )}>{title}</h2>
 
-      <div className="flex flex-col md:flex-row shadow-2xl items-center md:items-start">
+      <div className={`flex flex-col ${Images ? "xl:flex-cols" : ""} md:flex-row shadow-2xl items-center md:items-start justify-between`}>
         {/* Responsive Sticky/Top Image */}
-        <div className="w-full max-w-xl md:w-auto md:sticky md:top-4 md:self-start p-0 ">
+        <div className={`w-full max-w-2xl xl:w-auto xl:sticky xl:top-4 xl:self-start`}>
           {
             type ? 
               <Image
@@ -45,7 +45,7 @@ const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false
             rtl ? 'xxs:text-2xl xxxs:text-xl' : 'md:text-xl lg:text-2xl xs:text-xl xxxs:text-md'
         )}>
          {paragraphs.map((p,i)=>
-         <p key={i} className='text-center mb-4 xs:leading-normal md:leading-relaxed hover:text-blue-950'>
+         <p key={i} className='text-center mb-4 xs:leading-normal md:leading-loose hover:text-blue-950'>
             {p}
          </p>
         )}

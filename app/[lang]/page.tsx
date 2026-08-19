@@ -724,21 +724,9 @@ export default function Home() {
          />
       </div>
 
-      <div className="mt-10 xxxs:min-w-[100%] mb-10">
-        <ParagraphStickyImage
-        rtl={lang === 'ar'}
-        imageSrc={""}
-        paragraphs={t.P2}
-        title={t.P2_Title}
-        type={false}
-        Images={["/Images/ISO/Iso (2).jpeg", "/Images/ISO/Iso (1).jpeg"]}
-        // paragraphs={t.P5}
-        //  title={t.P5_Title}
-        //  rtl={isRTL}
-         />
-      </div>
 
-      <div className="mt-10 xxxs:min-w-[100%] mb-10">
+
+      {/* <div className="mt-10 xxxs:min-w-[100%] mb-10">
         <section
             dir={isRTL ? 'rtl' : 'ltr'}
             className="w-full mt-12 px-4 py-4 sm:px-6 lg:px-12 bg-[#FAFAF0] rounded-3xl shadow-2xl border border-cyan-700/40 xl:min-width mx-auto"
@@ -778,9 +766,9 @@ export default function Home() {
                   نحن ملتزمون بالاستمرار في تطوير أنظمتنا وضمان التوافق مع أحدث المعايير العالمية، بما يضمن استدامة الجودة والشفافية في كل ما نقدمه.
                 </p>
             </div>
-          </section>
-      </div>
         <ImageCarousel srcs={["/Images/ISO/Iso (2).jpeg", "/Images/ISO/Iso (1).jpeg"]}></ImageCarousel>
+          </section>
+      </div> */}
 
       <div className="border border-border/40 backdrop-blur-sm rounded-3xl shadow-2xl border-cyan-700/40 mb-12">
               <ModernIconList
@@ -805,7 +793,30 @@ export default function Home() {
           </CardGridList>
       </div>
 
-              <Heading>
+      <div className="mt-10 xxxs:min-w-[100%] mb-10">
+        <ParagraphStickyImage
+        rtl={lang === 'ar'}
+        imageSrc={""}
+        // paragraphs={t.P2}
+        // title={t.P2_Title}
+        paragraphs={[
+          "حصل المعمل المركزي لفحص ومراقبه انتاج وتصدير البطاطس علي الاعتماد الدولي ISO 17025:2017 منذ أبريل 2020 والخاص بكفاءه اختبار المعامل ، وهو يمثل خطوة مهمة نحو تعزيز ثقة عملائنا ، ويؤكد حرصنا على تقديم نتائج دقيقة ومعتمدة تلبي احتياجاتهم وتدعم قراراتهم بجانب تعزيز الثقه للجهات الرقابية المحلية والدولية في كفاءه الاختبارات ومصداقية النتائج.",
+          "خطواتنا للتعزيز المستمر للاعتماد:",
+          "• تزويد المعمل باستمرار بأحدث الأجهزة والتقنيات المتطورة لضمان دقة الفحوصات.",
+          "• تدريب العاملين بشكل مستمر على استخدام هذه الأجهزة وفق أحدث الممارسات العالمية.",
+          "• تطبيق احدث بروتوكولات الفحص المعتمدة دوليًا لضمان موثوقية النتائج وتوافقها مع المعايير العالمية.",
+          "نحن ملتزمون بالاستمرار في تطوير أنظمتنا وضمان التوافق مع أحدث المعايير العالمية، بما يضمن استدامة الجودة والشفافية في كل ما نقدمه.",
+        ]}
+        title={"معاير الجودة والكفاءة المعملية Iso 17025:2017"}
+        type={false}
+        Images={["/Images/ISO/Iso (2).jpeg", "/Images/ISO/Iso (1).jpeg"]}
+        // paragraphs={t.P5}
+        //  title={t.P5_Title}
+        //  rtl={isRTL}
+         />
+      </div>
+
+        <Heading>
           {t.Services_Title}
         </Heading>
 
