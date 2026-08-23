@@ -16,7 +16,7 @@ import { CardUnorderedList } from "../../components/CardUnorderedList";
 import { AccentHighlightList } from "../../components/AccentHighlightList";
 // import { PremiumHybridNestedList } from "@/components/PremiumHybridNestedList";
 // import CinematicVideoGallery from "@/components/CinematicVideoGallery";
-import { ImageCarousel } from "@/components/ShadCN-Carousel";
+// import { ImageCarousel } from "@/components/ShadCN-Carousel";
 export default function Home() {
   const {lang} = useParams();
   const t = arHome;

@@ -31,7 +31,7 @@ type ImageCarouselProps = {
 
 export function ImageCarousel({ srcs }: ImageCarouselProps) {
   return (
-    <Carousel className="max-w-md p-0 mx-auto mt-10" dir={"ltr"}>
+    <Carousel className="max-w-md p-0 mx-auto mts-10" dir={"ltr"}>
       <CarouselContent>
         {srcs.map((src, index) => (
           <CarouselItem key={`${src}-${index}`}>

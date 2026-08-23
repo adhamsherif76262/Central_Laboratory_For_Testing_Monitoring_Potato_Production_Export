@@ -23,7 +23,7 @@ const ParagraphStickyImage: React.FC<ParagraphStickyImageProps> = ({ rtl = false
 
       <div className={`flex flex-col ${Images ? "xl:flex-cols" : ""} md:flex-row shadow-2xl items-center md:items-start justify-between`}>
         {/* Responsive Sticky/Top Image */}
-        <div className={`w-full max-w-2xl xl:w-auto xl:sticky xl:top-4 xl:self-start`}>
+        <div className={`w-full max-w-2xl xl:w-auto xl:sticky xl:top-4s top-0 xl:self-start`}>
           {
             type ? 
               <Image
