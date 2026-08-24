@@ -275,14 +275,14 @@ export function PremiumHybridNestedList({ items, isRTL = false }: PremiumHybridN
           return (
             <div
               key={item.id}
-              className="space-y-3 transition-all duration-300"
+              className="space-y-3 hover:cursor-pointer transition-all duration-300"
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
               {/* Card with Indicator */}
               <button
                 onClick={() => hasChildren && toggleExpand(item.id)}
-                className={`w-full group relative overflow-hidden rounded-2xl border-2 ${styles.border} ${styles.bg} transition-all duration-400 disabled:ospacity-50 disabled:cursor-default
+                className={`hover:cursor-pointer w-full group relative overflow-hidden rounded-2xl border-2 ${styles.border} ${styles.bg} transition-all duration-400 disabled:ospacity-50 disabled:cursor-default
                   ${isHovered ? 'shadow-xl scale-102 border-opacity-100' : 'shadow-md'}
                   ${isExpanded && hasChildren ? 'shadow-lg' : ''}
                 `}

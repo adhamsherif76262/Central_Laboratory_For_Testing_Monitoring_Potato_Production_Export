@@ -12,7 +12,9 @@ import CinematicVideoGallery from '@/components/CinematicVideoGallery';
 // import { ImageCarousel } from '@/components/ShadCN-Carousel';
 import { getPdfMetaSync } from '@/lib/pdf-meta';
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import PDFWrapper from "@/components/PDFWrapper";
+import { PrevDirectorsCarousel } from '@/components/prev-directors-carousel';
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -37,12 +39,16 @@ const mastersMeta = getPdfMetaSync("/PDFs/Masters_and_Doctoral_Theses.pdf");
 
   return (
     <main className="max-ws-8xl mx-10 my-0 p-0 ">
-
         <Heading>
           {t.Statistics_Title}
         </Heading>
         <ImageGallery language={isRTL ? "ar" : "en"}/>
         
+        <Heading>
+          {t.Directors_Title}
+        </Heading>
+        
+        <PrevDirectorsCarousel></PrevDirectorsCarousel>
               <div className="space-y-10 py-6 xxxs:overflow-hiddesn xxs:overflow-visible">
                 <PDFWrapper 
                   // title={isArabic ? 'ملف الأبحاث' : 'Researches File'}
@@ -80,7 +86,7 @@ const mastersMeta = getPdfMetaSync("/PDFs/Masters_and_Doctoral_Theses.pdf");
       </div>
 
         <CinematicVideoGallery Title={t.Video_Gallery_Main_Title} Sub_Title={t.Video_Gallery_Sub_Title} videos={t.Video_Gallery_Array} language={isRTL ? "ar" : "en"}/>
-        <GradientCarousel items={t.ISO} />
+        <GradientCarousel items={t.Statistics} />
 
         {/* Card List */}
         {/* <div className="px-0 mb-12 mt-18 bg-[#FAFAF0] border border-border/40 backdrop-blur-sm rounded-3xl shadow-2xl border-cyan-700/40">

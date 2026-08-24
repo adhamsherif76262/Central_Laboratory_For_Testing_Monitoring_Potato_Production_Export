@@ -1,5 +1,6 @@
 {
     
+    "Directors_Title": "الاحصائيات الخاصة بالأنشطة المختلفة للمعمل لخمسه مواسم متتاليه حتى موسم 2024-2025",
     "Statistics_Title": "الاحصائيات الخاصة بالأنشطة المختلفة للمعمل لخمسه مواسم متتاليه حتى موسم 2024-2025",
     "Statistics":[
       {
@@ -74,10 +75,136 @@
             "id": "1",
             "title": "",
             "titleAr": "",
-            "embedUrl": ""
+            "embedUrl": "https://odysee.com/%24/embed/%40CLATMPE%3Af%2FPotato-13%3Ae?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (1).png"
+        },
+        {
+            "id": "2",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2FPotato-4%3A8?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (2).png"
+        },
+        {
+            "id": "3",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2Fpotatos%3A2?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (3).png"
+        },
+        {
+            "id": "4",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2FPotato-8%3Ad?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (4).png"
+        },
+        {
+            "id": "5",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2FPotato-1%3A8?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (5).png"
+        },
+        {
+            "id": "6",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2F12-potato%3Ad?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (6).png"
+        },
+        {
+            "id": "7",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2F11-potato%3A8?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (7).png"
+        },
+        {
+            "id": "8",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://odysee.com/%24/embed/%40CLATMPE%3Af%2F10-potato%3A7?r=GztNrhECqLzhH19KpeWJHCTy9GZFf3kL",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (8).png"
+        },
+        {
+            "id": "9",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/2-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (9).png"
+        },
+        {
+            "id": "10",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/3-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (10).png"
+        },
+        {
+            "id": "11",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/5-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (11).png"
+        },
+        {
+            "id": "12",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/6-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (12).png"
+        },
+        {
+            "id": "13",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/7-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (13).png"
+        },
+        {
+            "id": "14",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/9-mostafa_elsherbeny.mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (14).png"
+        },
+        {
+            "id": "15",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/videoplayback (1).mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (15).png"
+        },
+        {
+            "id": "16",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/videoplayback (2).mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (16).png"
+        },
+        {
+            "id": "17",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/videoplayback (3).mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (17).png"
+        },
+        {
+            "id": "18",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"/Videos/Videoplayback (4) .mp4",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (19).png"
+        },
+        {
+            "id": "19",
+            "title": "",
+            "titleAr": "",
+            "embedUrl":"https://www.youtube.com/embed/1DkE8e-si3o?si=FnKMWYdAaYolQrlC",
+            "thumbnail" : "/Images/Thumbnails/Thumbnail (18).png"
         }
-
     ],
-    "Video_Gallery_Main_Title" : "",
+    "Video_Gallery_Main_Title" : "مجموعة من الفيديوهات الخاصة بالمعمل المركزي لفحص ومراقبة انتاج وتصدير البطاطس",
     "Video_Gallery_Sub_Title" : ""
 }
