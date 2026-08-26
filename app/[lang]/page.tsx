@@ -49,13 +49,13 @@ export default function Home() {
         
       <div className="w-full max-w-4xsl space-y-4">
         {/* Clean News Ticker Display Header */}
-        {/* <div className="flex items-center gap-3 justify-center dir-rtl w-full px-2">
+        <div className="flex items-center gap-3 justify-center dir-rtl w-full px-2">
           <span className="relative flex h-5 w-5 ">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-5 w-5 bg-red-600"></span>
           </span>
           <h2 className="text-2xl font-black text-red-500 text-center">آخر الأخبار</h2>
-        </div> */}
+        </div>
 
         {/* Ticker implementation using your string configuration */}
         <ArabicMarquee pauseOnHover={true}>
