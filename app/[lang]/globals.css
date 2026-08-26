@@ -110,6 +110,27 @@
   --color-accent-foreground: #2e2e2e;
   --color-destructive: #ff4d4d;
   --color-destructive-foreground: #ffffff;
+  /* 1. Define the animation token name pointing to the keyframe */
+  /* --animate-marquee: marquee 10s linear infinite; */
+
+  /* 2. Declare standard CSS keyframe block inside the @theme block */
+  /* @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(50%); }
+  } */
+
+    --animate-marquee-ltr: marquee-ltr 30s linear infinite;
+  --animate-marquee-rtl: marquee-rtl 30s linear infinite;
+
+  @keyframes marquee-ltr {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-rtl {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(50%); }
+  }
 }
 
 
@@ -136,7 +157,7 @@
 .director-card:hover { transform: translateY(-.4rem); box-shadow: 0 1.75rem 3.5rem oklch(0.3 0.04 150 / .15); }
 .portrait-wrap { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: none }
 .portrait-wrap img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
-.current-badge { position: absolute; top: 0; right: 0; padding: .45rem .75rem; border-radius: 999px; background: var(--primary); color: var(--primary-foreground); font-size: .78rem; font-weight: 700; box-shadow: 0 .3rem .8rem oklch(0.2 0.08 150 / .2); }
+.current-badge { position: absolute; top: 0; right: 0; padding: .45rem .75rem; border-radius: 0px; background: var(--primary); color: var(--primary-foreground); font-size: .78rem; font-weight: 700; box-shadow: 0 .3rem .8rem oklch(0.2 0.08 150 / .2); }
 .card-copy { padding: 1.35rem 1rem 1.5rem; text-align: center; }
 .card-copy h2 { margin: 0; color: var(--foreground); font-family: var(--font-display); font-size: clamp(1.15rem, 2.3vw, 1.55rem); line-height: 1.45; }
 .period { display: flex; align-items: center; justify-content: center; gap: .45rem; margin-top: .75rem; color: var(--primary); font-size: .95rem; font-weight: 700; }
@@ -509,4 +530,20 @@ body {
   html {
     @apply font-sans;
     }
+}
+
+@layer utilities {
+  .mask-gradient {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+  /* @utility mask-gradient {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+} */
+
+/* @utility mask-gradient-rtl {
+  mask-image: linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%, black 90%, transparent 100%);
+} */
 }

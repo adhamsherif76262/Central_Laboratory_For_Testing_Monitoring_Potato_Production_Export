@@ -86,7 +86,7 @@ const mastersMeta = getPdfMetaSync("/PDFs/Masters_and_Doctoral_Theses.pdf");
       </div>
 
         <CinematicVideoGallery Title={t.Video_Gallery_Main_Title} Sub_Title={t.Video_Gallery_Sub_Title} videos={t.Video_Gallery_Array} language={isRTL ? "ar" : "en"}/>
-        <GradientCarousel items={t.Statistics} />
+        {/* <GradientCarousel items={t.Statistics} /> */}
 
         {/* Card List */}
         {/* <div className="px-0 mb-12 mt-18 bg-[#FAFAF0] border border-border/40 backdrop-blur-sm rounded-3xl shadow-2xl border-cyan-700/40">
